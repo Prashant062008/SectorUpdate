@@ -19,7 +19,7 @@ jobs:
       - run: dotnet restore SingaporeSectorUpdate.sln
       - run: dotnet build SingaporeSectorUpdate.sln -c Release --no-restore
       - run: dotnet publish SingaporeSectorUpdate/SingaporeSectorUpdate.csproj -c Release -o publish --no-build
-
+      - run: dotnet test SingaporeSectorUpdate.sln -c Release --no-build
       - uses: actions/upload-artifact@v4
         with:
           name: SingaporeSectorUpdate
