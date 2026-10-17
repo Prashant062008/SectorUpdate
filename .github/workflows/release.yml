@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with: { dotnet-version: 8.0.x }
       - run: dotnet publish SingaporeSectorUpdate/SingaporeSectorUpdate.csproj -c Release -r win-x64 --self-contained false -o publish
       - run: Compress-Archive publish/* SingaporeSectorUpdate-${{ github.ref_name }}.zip
