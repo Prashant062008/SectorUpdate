@@ -1,4 +1,4 @@
 ﻿using SingaporeSectorUpdate;
 
-A3JsonSector.GenerateSectorFile();
+CompareSectorFile.CompareSectorXmlFiles();
 
